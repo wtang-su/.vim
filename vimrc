@@ -13,19 +13,19 @@ set smartcase
 set autoindent
 set background=light
 set t_Co=256
-set mouse=a
+" set mouse=a
 set backspace=indent,eol,start
 filetype plugin indent on
 syntax on
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine term=bold cterm=bold
 autocmd FileType python match Underlined /\%>79v.*/
 autocmd FileType python,javascript setlocal completeopt-=preview
 
 let mapleader = ";"
 " key maps
 nmap <leader>w :w<cr>
-nmap <leader>q :w<cr>
+nmap <leader>q :q<cr>
 
 " Pathogen
 execute pathogen#infect() 
@@ -36,7 +36,7 @@ let g:jedi#popup_select_first = 0
 
 " Supertab
 let b:SuperTabDisabled = 1
-let g:SuperTabDefaultCompletionType = "<c-x><c-o><c-p>"
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 autocmd FileType python,javascript,c,sh,html,css let b:SuperTabDisabled = 0
 
 " Nerdtree
