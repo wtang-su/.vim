@@ -26,6 +26,7 @@ let mapleader = ";"
 " key maps
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
+nmap <leader>x :x<cr>
 
 " Pathogen
 execute pathogen#infect() 
