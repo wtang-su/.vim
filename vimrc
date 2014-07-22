@@ -4,8 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
-" set showcmd
-" set number
+set showcmd
+set number
 set showmatch
 set hlsearch
 set incsearch
@@ -13,12 +13,11 @@ set smartcase
 set autoindent
 set background=light
 set t_Co=256
-" set mouse=a
+set mouse=a
 set backspace=indent,eol,start
 filetype plugin indent on
 syntax on
 set cursorline
-hi CursorLine term=bold cterm=bold
 autocmd FileType python match Underlined /\%>79v.*/
 autocmd FileType python,javascript setlocal completeopt-=preview
 
@@ -55,3 +54,8 @@ nnoremap <C-l> :TlistToggle<cr>
 
 " Flake8
 let g:flake8_max_line_length=160
+
+" molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+colorscheme molokai
