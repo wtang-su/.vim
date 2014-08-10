@@ -1465,6 +1465,14 @@ let s:emmet_settings = {
 \                    ."</head>\n"
 \                    ."<body>\n\t${child}|\n</body>\n"
 \                    ."</html>",
+\            'html:su': "<!DOCTYPE html>\n"
+\                    ."<html>\n"
+\                    ."<head>\n"
+\                    ."\t<meta charset=\"${charset}\">\n"
+\                    ."\t<title>|</title>\n"
+\                    ."</head>\n"
+\                    ."<body>\n\t${child}|\n</body>\n"
+\                    ."</html>",
 \        },
 \        'default_attributes': {
 \            'a': {'href': ''},
