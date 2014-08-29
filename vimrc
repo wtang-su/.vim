@@ -59,3 +59,4 @@ let g:flake8_max_line_length=160
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
+hi Normal ctermfg=252 ctermbg=none
