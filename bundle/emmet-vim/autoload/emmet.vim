@@ -1514,7 +1514,6 @@ let s:emmet_settings = {
 \            'form:get': {'action': '', 'method': 'get'},
 \            'form:post': {'action': '', 'method': 'post'},
 \            'form:upload': {'action': '', 'method': 'post', 'enctype': 'multipart/form-data'},
-\            'label': {'for': ''},
 \            'input': {'type': ''},
 \            'input:hidden': [{'type': 'hidden'}, {'name': ''}],
 \            'input:h': [{'type': 'hidden'}, {'name': ''}],
