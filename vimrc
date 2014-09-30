@@ -30,10 +30,6 @@ nmap <leader>x :x<cr>
 " Pathogen
 execute pathogen#infect() 
 
-" Jedi
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-
 " Supertab
 let b:SuperTabDisabled = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
