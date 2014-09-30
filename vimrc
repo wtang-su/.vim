@@ -33,7 +33,7 @@ execute pathogen#infect()
 " Supertab
 let b:SuperTabDisabled = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType python,javascript,c,sh,html,css let b:SuperTabDisabled = 0
+autocmd FileType python,go,javascript,c,sh,html,css let b:SuperTabDisabled = 0
 
 " Nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -57,7 +57,7 @@ let g:rehash256 = 1
 colorscheme molokai
 hi Normal ctermfg=252 ctermbg=none
 
-" neocomplete
+""""""""""""""""""""""""""""" neocomplete start
 "
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -131,3 +131,5 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+"""""""""""""""""""""""""" neocomplete end
