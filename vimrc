@@ -57,6 +57,21 @@ let g:rehash256 = 1
 colorscheme molokai
 hi Normal ctermfg=252 ctermbg=none
 
+" vim-go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """"""""""""""""""""""""""""" neocomplete start
 "
 " Disable AutoComplPop.
