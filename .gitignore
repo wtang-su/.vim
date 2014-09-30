@@ -1,6 +1,0 @@
-bundle/jedi-vim/__pycache__/
-bundle/jedi-vim/jedi/jedi/__pycache__/
-bundle/jedi-vim/jedi/jedi/api/__pycache__/
-bundle/jedi-vim/jedi/jedi/evaluate/__pycache__/
-bundle/jedi-vim/jedi/jedi/evaluate/compiled/__pycache__/
-bundle/jedi-vim/jedi/jedi/parser/__pycache__/
