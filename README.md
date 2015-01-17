@@ -1,7 +1,7 @@
 wtang-su.vim
 ============
 
-My vimrc and vim plugins
+Bak of my vimrc file and vim plugins
 
 
 ``` bash
@@ -11,7 +11,7 @@ wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 sudo tar jxf vim-7.4.tar.bz2 -C /opt/
 cd /opt/vim74/
 
-sudo ./configure --with-features=huge --with-x --enable-gui=auto --enable-python3interp=yes --enable-rubyinterp=yes --enable-luainterp=yes
+sudo ./configure --with-features=huge --with-x --enable-gui=auto --enable-python3interp=yes
 sudo make
 sudo make install
 ```
