@@ -1,7 +1,7 @@
 wtang-su.vim
 ============
 
-Bak of my vimrc file and vim plugins
+Backup of my vimrc file and vim plugins
 
 
 ``` bash
