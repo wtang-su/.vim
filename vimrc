@@ -33,7 +33,7 @@ execute pathogen#infect()
 " Supertab
 let b:SuperTabDisabled = 1
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-autocmd FileType python,go,javascript,c,sh,html,css let b:SuperTabDisabled = 0
+autocmd FileType go,javascript,c,sh,html,css let b:SuperTabDisabled = 0
 
 " Nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
