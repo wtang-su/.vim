@@ -48,15 +48,18 @@ let Tlist_Close_On_Select = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 nnoremap <C-l> :TlistToggle<cr>
 
-" Flake8
-let g:flake8_max_line_length=160
-
 " molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
 hi Normal ctermfg=252 ctermbg=none
 
-" jedi-vim
-let g:jedi#popup_select_first = 0
+" vim-go
+au FileType go nnoremap <Leader>o :GoImports <cr>
+au FileType go nnoremap <Leader>r :w <cr> :GoRun <cr>
+au FileType go nnoremap <C-k> :GoDoc <cr>
 
+" YCM
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1

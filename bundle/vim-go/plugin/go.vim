@@ -93,6 +93,7 @@ function! s:GoInstallBinaries(updateBinaries)
 
 
             let out = system(cmd . shellescape(pkg))
+            " echo "cmd: ". cmd . shellescape(pkg)
             if v:shell_error
                 echo "Error installing ". pkg . ": " . out
             endif
