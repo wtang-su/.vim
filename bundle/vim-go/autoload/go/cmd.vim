@@ -97,7 +97,7 @@ function! go#cmd#Run(bang, ...)
     let $GOPATH = go#path#Detect()
 
     if go#util#IsWin()
-        exec '!go run ' . go#util#Shelljoin(go#tool#Files())
+        exec 'go run ' . go#util#Shelljoin(go#tool#Files())
         if v:shell_error
             redraws! | echon "vim-go: [run] " | echohl ErrorMsg | echon "FAILED"| echohl None
         else
@@ -111,7 +111,7 @@ function! go#cmd#Run(bang, ...)
     " :make expands '%' and '#' wildcards, so they must also be escaped
     let default_makeprg = &makeprg
     if a:0 == 0
-        let &makeprg = 'go run ' . go#util#Shelljoin(go#tool#Files(), 1)
+        let &makeprg = 'go run ' . go#util#Shelljoin(go#tool#Files())
     else
         let &makeprg = "go run " . go#util#Shelljoin(map(copy(a:000), "expand(v:val)"), 1)
     endif
@@ -131,9 +131,9 @@ function! go#cmd#Run(bang, ...)
 
     call go#list#Populate(l:listtype, errors)
     call go#list#Window(l:listtype, len(errors))
-    if !empty(errors) && !a:bang
-        call go#list#JumpToFirst(l:listtype)
-    endif
+    "if !empty(errors) && !a:bang
+        "call go#list#JumpToFirst(l:listtype)
+    "endif
 
     let $GOPATH = old_gopath
     let &makeprg = default_makeprg
