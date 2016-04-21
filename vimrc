@@ -57,6 +57,8 @@ let g:ctrlp_regexp = 1
 let g:go_gorename_prefill = 0
 au FileType go nnoremap <C-i> :GoImports <cr>
 au FileType go nnoremap <F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>
+au FileType go nnoremap <F7> :w <cr> :GoTest <cr>
+au FileType go nnoremap <F6> :w <cr> :GoErrCheck <cr>
 au FileType go nnoremap <F2> :w <cr> :GoRename <cr>
 au FileType go nnoremap <C-k> :GoDoc <cr>
 
