@@ -7,7 +7,7 @@ set smarttab
 set showcmd
 set number
 set showmatch
-set hlsearch
+set nohlsearch
 set incsearch
 set smartcase
 set autoindent
@@ -54,6 +54,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
 " vim-go
+au FileType go silent exec "!gocode set autobuild true > /dev/null"
 let g:go_gorename_prefill = 0
 au FileType go nnoremap <C-i> :GoImports <cr>
 au FileType go nnoremap <F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>

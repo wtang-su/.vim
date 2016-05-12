@@ -35,7 +35,7 @@ function! go#def#Jump(...)
 	let out = s:system(command, join(getbufline(bufnr('%'), 1, '$'), go#util#LineEnding()))
 
 	" jump to it
-	call s:godefJump(out, "")
+    call s:godefJump(out, "")
 	let $GOPATH = old_gopath
 endfunction
 
@@ -75,9 +75,9 @@ function! s:godefJump(out, mode)
 		let out = substitute(a:out, go#util#LineEnding() . '$', '', '')
 		echom out
 	else
-		let parts = split(a:out, ':')
+		" let parts = split(a:out, ':')
 		" parts[0] contains filename
-		let fileName = parts[0]
+		" let fileName = parts[0]
 
 		" put the error format into location list so we can jump automatically to
 		" it
@@ -87,19 +87,20 @@ function! s:godefJump(out, mode)
 		" modes of switchbuf which we need based on the split mode
 		let old_switchbuf = &switchbuf
 
-		if a:mode == "tab"
-			let &switchbuf = "usetab"
+        "if a:mode == "tab"
+            "let &switchbuf = "usetab"
 
-			if bufloaded(fileName) == 0
-				tab split
-			endif
-		else
-			if a:mode  == "split"
-				split
-			elseif a:mode == "vsplit"
-				vsplit
-			endif
-		endif
+            "if bufloaded(fileName) == 0
+                "tab split
+            "endif
+        "else
+            "if a:mode  == "split"
+                "split
+            "elseif a:mode == "vsplit"
+                "vsplit
+            "endif
+        "endif
+       tabnew 
 
 		" jump to file now
 		sil ll 1
