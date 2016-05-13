@@ -7,7 +7,7 @@ set smarttab
 set showcmd
 set number
 set showmatch
-set nohlsearch
+set hlsearch
 set incsearch
 set smartcase
 set autoindent
