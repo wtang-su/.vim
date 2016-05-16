@@ -58,9 +58,8 @@ let g:ctrlp_regexp = 1
 au FileType go silent exec "!gocode set autobuild true > /dev/null"
 let g:go_gorename_prefill = 0
 au FileType go nnoremap <C-i> :GoImports <cr>
-au FileType go nnoremap <F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>
-au FileType go nnoremap <F7> :w <cr> :GoTest <cr>
-au FileType go nnoremap <F6> :w <cr> :GoErrCheck <cr>
+au FileType go nnoremap <C-F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>
+au FileType go nnoremap <C-F7> :w <cr> :GoTest <cr>
 au FileType go nnoremap <F2> :w <cr> :GoRename <cr>
 au FileType go nnoremap <C-k> :GoDoc <cr>
 
@@ -70,6 +69,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Tagbar
-nmap <C-l> :TagbarToggle<CR>
+nmap <c-f12> :TagbarOpen<cr> /
+nmap <c-l> :TagbarToggle<cr>
 let g:tagbar_width = 30
 let g:tagbar_autofocus = 1
