@@ -18,7 +18,7 @@ set backspace=indent,eol,start
 filetype plugin indent on
 syntax on
 set cursorline
-autocmd FileType python match Underlined /\%>79v.*/
+autocmd FileType python match Underlined /\%>120v.*/
 autocmd FileType python,go,javascript,c,sh,html,css setlocal completeopt-=preview
 
 let mapleader = ";"
@@ -55,21 +55,22 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
 " vim-go
-au FileType go silent exec "!gocode set autobuild true > /dev/null"
-let g:go_gorename_prefill = 0
-au FileType go nnoremap <C-i> :GoImports <cr>
-au FileType go nnoremap <C-F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>
-au FileType go nnoremap <C-F7> :w <cr> :GoTest <cr>
-au FileType go nnoremap <F2> :w <cr> :GoRename <cr>
-au FileType go nnoremap <C-k> :GoDoc <cr>
+"au FileType go silent exec "!gocode set autobuild true > /dev/null"
+"let g:go_gorename_prefill = 0
+"au FileType go nnoremap <C-i> :GoImports <cr>
+"au FileType go nnoremap <C-F9> :w <cr> :exec("!go run ". shellescape(expand('%:p')))<cr>
+"au FileType go nnoremap <C-F7> :w <cr> :GoTest <cr>
+"au FileType go nnoremap <F2> :w <cr> :GoRename <cr>
+"au FileType go nnoremap <C-k> :GoDoc <cr>
 
 " YCM
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:ycm_add_preview_to_completeopt = 0
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Tagbar
 nmap <c-f12> :TagbarOpen<cr> /
 nmap <c-l> :TagbarToggle<cr>
 let g:tagbar_width = 30
 let g:tagbar_autofocus = 1
+let g:tagbar_autoclose = 1
